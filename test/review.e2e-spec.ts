@@ -85,7 +85,6 @@ describe('AppController (e2e)', () => {
         statusCode: 404,
         message: REVIEW_NOT_FOUND
       });
-    
   });
 
   afterAll((done) => {

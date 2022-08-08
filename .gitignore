@@ -38,4 +38,5 @@ lerna-debug.log*
 #
 .env
 bfg-1.14.0.jar
+/.clinic
 
