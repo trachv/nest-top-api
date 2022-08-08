@@ -36,5 +36,6 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 #
-.env
+*.env
+bfg-1.14.0.jar
 
