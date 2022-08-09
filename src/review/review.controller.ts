@@ -10,12 +10,14 @@ export class ReviewController {
 
   }
 
+  @UseGuards(JwtAuthGuard)
   @UsePipes(new ValidationPipe())
   @Post('create')
   async create(@Body() dto: CreateReviewDto) {
     return this.reviewServise.create(dto);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Delete(':id')
   async delete(@Param('id') id: string) {
     const deletedDoc = await this.reviewServise.delete(id);
@@ -24,7 +26,6 @@ export class ReviewController {
     }
   }
 
-  @UseGuards(JwtAuthGuard)
   @Get('byProduct/:productId')
   async getByProduct(@Param('productId') productId: string) {
     return this.reviewServise.findByProductId(productId);
