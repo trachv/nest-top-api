@@ -37,7 +37,7 @@ export class TopPageAdvantage {
 
 export interface TopPageModel extends Base {}
 
-@index({ title: 'text', seoText: 'text' })
+@index({ '$**': 'text' })
 export class TopPageModel extends TimeStamps {
   @prop({ enum: TopLevelCategory })
   firstCategory: TopLevelCategory;
