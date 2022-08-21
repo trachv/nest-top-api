@@ -15,6 +15,7 @@ export class AuthController {
       throw new BadRequestException(ALREADY_REGISTERED_ERROR)
     }
     return this.authService.createUser(dto);
+    
   }
   
   @UsePipes(new ValidationPipe())
